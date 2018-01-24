@@ -5,17 +5,6 @@ function getQuote() {
     $.getJSON(quoteUrl, createTweet);
 };
 
-$.ajax({
-    dataType: "json",
-    url: quoteUrl,
-    data: null,
-    success: createTweet
-});
-
-function getQuote() {
-    $.getJSON(quoteUrl, createTweet);
-};
-
 function createTweet(input) {
     var data = input[0];
 
@@ -35,8 +24,6 @@ function createTweet(input) {
 	    $('.author').text("Author: " + quoteAuthor);
 	    $('.tweet').attr('href', tweet);
 	};
-	$('.tweet').attr('href', tweet);
-};
 
 $(document).ready(function() {
     getQuote();
